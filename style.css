@@ -1,0 +1,246 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?fit=crop&w=3000') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #333;
+    image-rendering: auto;
+}
+
+.bg-medium-purple {
+    background-color: #3b1c32;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.navbar {
+    padding: 16px;
+    z-index: 1000;
+}
+
+.nav-link:hover {
+    color: #a64d79 !important;
+}
+
+.nav-toggle {
+    display: block;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.nav-toggle-label .hamburger {
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    background: white; 
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-toggle-label .hamburger::before,
+.nav-toggle-label .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: white; 
+    left: 0;
+}
+
+.nav-toggle-label .hamburger::before {
+    top: -8px;
+}
+
+.nav-toggle-label .hamburger::after {
+    top: 8px;
+}
+
+@media (max-width: 991px) {
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #3b1c32; 
+        padding: 16px;
+        z-index: 999;
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        display: block;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: 8px 0;
+    }
+}
+
+.hero {
+    background: url('https://images.squarespace-cdn.com/content/v1/53a05cdee4b0c1bc44841a7b/1542172071935-2BDLZXWL2JNBIPYURZSV/101+Food+Photography+Tips') no-repeat center center/cover;
+    margin-top: 56px;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, #1a1a1d); 
+    z-index: 1;
+}
+
+.hero-content {
+    background: rgba(26, 26, 29, 0.7);
+    position: relative;
+    z-index: 2;
+}
+
+.restaurant-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu-color {
+    background: linear-gradient(to bottom, #e1aec2, #4a2f3d);
+}
+
+.menu-content {
+    background: rgba(26, 26, 29, 0.7); 
+    position: relative;
+    z-index: 2;
+}
+
+.menu-section .card {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+}
+
+.badge.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.price {
+    font-weight: bold;
+    color: #a64d79; 
+}
+
+.text-primary {
+    color: #892f53 !important;
+    font-weight: bold;
+}
+
+.text-color {
+    color: aliceblue;
+}
+
+.order-food-content {
+    background: rgba(26, 26, 29, 0.7); 
+    position: relative;
+    z-index: 2;
+}
+
+/* Background for Restaurants and Order Sections */
+#restaurants {
+    background: #2e1a27; 
+}
+
+#order {
+    background: #4a2f3d; 
+    position: relative; 
+}
+
+
+#order .menu-content {
+    background: rgba(26, 26, 29, 0.7);
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+#about {
+    background: linear-gradient(to bottom, #2e1a27, #e1aec2); 
+}
+
+.btn-primary {
+    background-color: #a64d79;
+    border-color: #a64d79;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    border-color: white;
+    color: #a64d79;
+}
+
+@media (max-width: 768px) {
+    .hero h1, .order-food-content h2, .menu-content h2 {
+        font-size: 32px;
+    }
+
+    .hero p, .order-food-content p {
+        font-size: 16px;
+    }
+
+    .hero-content, .order-food-content, .menu-content {
+        padding: 24px !important;
+    }
+
+    .form-control-sm {
+        width: 60px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1, .order-food-content h2, .menu-content h2 {
+        font-size: 24px;
+    }
+
+    .hero p, .order-food-content p {
+        font-size: 14.4px;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    vertical-align: middle;
+}
